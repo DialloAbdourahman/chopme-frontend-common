@@ -7,3 +7,4 @@ export * from "./status-response";
 export * from "./transfer-statuses";
 export * from "./user-roles";
 export * from "./wallet-types";
+export * from "./networks";
