@@ -6,8 +6,8 @@ export interface IClientEntity {
   address?: {
     country?: string;
     city?: string;
-    longitude?: number;
-    latitude?: number;
+    longitude: number;
+    latitude: number;
   };
 
   phoneNumber?: string;
