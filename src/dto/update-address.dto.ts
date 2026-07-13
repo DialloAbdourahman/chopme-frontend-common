@@ -5,9 +5,9 @@ export const updateAddressSchema = z.object({
 
   latitude: z.number(),
 
-  country: z.string().optional(),
+  country: z.string(),
 
-  city: z.string().optional(),
+  city: z.string(),
 });
 
 export type UpdateAddressDto = z.infer<typeof updateAddressSchema>;
