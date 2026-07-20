@@ -73,7 +73,7 @@ export interface IRestaurantEntity {
 
   availability: IRestaurantAvailability[];
 
-  distance?: number;
+  distanceKm?: number;
 
   createdAt: Date;
   updatedAt: Date;
