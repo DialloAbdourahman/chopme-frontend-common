@@ -1,12 +1,12 @@
 import { ICategoryEntity } from "./category.entity";
 import { IRestaurantEntity } from "./restaurant.entity";
 
-export type MenuRating = {
+export type IMenuRating = {
   average: number;
   total: number;
 };
 
-export type Menu = {
+export type IMenu = {
   id: string;
 
   name: string;
@@ -27,7 +27,7 @@ export type Menu = {
 
   available: boolean;
 
-  rating: MenuRating;
+  rating: IMenuRating;
 
   createdAt: Date;
 
