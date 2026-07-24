@@ -29,6 +29,8 @@ export type IMenu = {
 
   // rating: IMenuRating;
 
+  ordersCount: number;
+
   createdAt: Date;
 
   updatedAt: Date;
