@@ -1,10 +1,10 @@
 import { ICategoryEntity } from "./category.entity";
 import { IRestaurantEntity } from "./restaurant.entity";
 
-export type IMenuRating = {
-  average: number;
-  total: number;
-};
+// export type IMenuRating = {
+//   average: number;
+//   total: number;
+// };
 
 export type IMenu = {
   id: string;
@@ -27,7 +27,7 @@ export type IMenu = {
 
   available: boolean;
 
-  rating: IMenuRating;
+  // rating: IMenuRating;
 
   createdAt: Date;
 
