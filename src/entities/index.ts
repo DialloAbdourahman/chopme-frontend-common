@@ -5,3 +5,4 @@ export * from "./category.entity";
 export * from "./menu.entity";
 export * from "./restaurant.entity";
 export * from "./address.entity";
+export * from "./restaurant-rating.entity";
