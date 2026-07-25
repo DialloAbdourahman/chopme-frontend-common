@@ -11,7 +11,7 @@ export type IMenu = {
 
   name: string;
 
-  restaurant: IRestaurantEntity;
+  restaurantId: string;
 
   category: ICategoryEntity;
 
