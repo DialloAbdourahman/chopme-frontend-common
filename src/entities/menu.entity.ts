@@ -13,6 +13,8 @@ export type IMenu = {
 
   restaurantId: string;
 
+  restaurantSlug: string;
+
   category: ICategoryEntity;
 
   description?: string;
