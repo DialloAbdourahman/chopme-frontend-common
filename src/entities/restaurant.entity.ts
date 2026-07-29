@@ -24,6 +24,7 @@ export interface IRestaurantDeliveryPricingKm {
   from: number;
   to: number;
   price: number;
+  priceWithPlatformPercentage: number;
 }
 
 export interface IRestaurantAvailability {
