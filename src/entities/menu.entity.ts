@@ -6,7 +6,7 @@ import { IRestaurantEntity } from "./restaurant.entity";
 //   total: number;
 // };
 
-export type IMenu = {
+export type IMenuEntity = {
   id: string;
 
   name: string;
