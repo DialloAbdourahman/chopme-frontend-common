@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const createClientSchema = z
   .object({
-    fullName: z.string().min(1, "Full name is required"),
+    fullName: z.string().min(5, "Full name must be at least 5 characters long"),
 
     email: z.email("Enter a valid email address"),
 
