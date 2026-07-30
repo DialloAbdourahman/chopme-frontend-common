@@ -4,3 +4,6 @@ export * from "./email-password-login.dto";
 export * from "./update-address.dto";
 export * from "./find-restaurant.dto";
 export * from "./create-rating.dto";
+export * from "./update-user-profile.dto";
+export * from "./update-password.dto";
+export * from "./update-client-information.dto";
