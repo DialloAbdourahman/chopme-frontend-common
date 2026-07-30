@@ -10,3 +10,4 @@ export * from "./user-roles";
 export * from "./wallet-types";
 export * from "./networks";
 export * from "./web-socket-events";
+export * from "./auth-types";
