@@ -5,7 +5,7 @@ export const updateClientInformationSchema = z.object({
     .string()
     .regex(
       /^\+2376\d{8}$/,
-      "Phone number must be a valid Cameroonian number in the format +237620487789",
+      "Phone number must be a valid Cameroonian number in the format +237677452145",
     )
     .optional(),
 });
