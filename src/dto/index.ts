@@ -1,5 +1,6 @@
 export * from "./create-client.dto";
 export * from "./create-order.dto";
+export * from "./create-restaurant-member.dto";
 export * from "./email-password-login.dto";
 export * from "./update-address.dto";
 export * from "./find-restaurant.dto";
