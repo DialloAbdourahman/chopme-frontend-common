@@ -5,14 +5,10 @@ import { IUserEntity } from "./user.entity";
 export interface IRestaurantMemberEntity {
   id: string;
   restaurant: IRestaurantEntity;
-  user?: IUserEntity;
+  user: IUserEntity;
   role: EnumRestaurantMemberRole;
   createdAt: Date;
   updatedAt: Date;
-  deletedAt?: Date | null;
-  deleted?: boolean;
-}
-
-export interface IRestaurantMemberWithUserEntity extends IRestaurantMemberEntity {
-  user: IUserEntity;
+  deletedAt: Date | null;
+  deleted: boolean;
 }
