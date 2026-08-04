@@ -7,7 +7,7 @@ export const createMenuSchema = (roundToNearestFCFA = 5) =>
     description: z.string().optional(),
     price: z
       .number({ message: "Price must be a number" })
-      .min(0, "Price must be at least 0")
+      .min(roundToNearestFCFA, `Price must be at least ${roundToNearestFCFA}`)
       .refine((val) => val % roundToNearestFCFA === 0, {
         message: `Price must be divisible by ${roundToNearestFCFA}`,
       }),
