@@ -5,7 +5,7 @@ export const createMenuSchema = (roundToNearestFCFA = 5) =>
     name: z.string().min(1, "Menu name is required"),
     category: z.string().min(1, "Category is required"),
     description: z.string().optional(),
-    price: z.coerce
+    price: z
       .number({ message: "Price must be a number" })
       .min(0, "Price must be at least 0")
       .refine((val) => val % roundToNearestFCFA === 0, {
