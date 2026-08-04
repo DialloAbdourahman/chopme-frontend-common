@@ -106,4 +106,5 @@ export interface IOrderEntity {
   updatedAt: Date;
 
   deletedAt?: Date | null;
+  deleted?: boolean;
 }

@@ -10,4 +10,7 @@ export interface IRestaurantRatingEntity {
   createdAt: Date;
 
   updatedAt: Date;
+
+  deleted?: boolean;
+  deletedAt?: Date | null;
 }

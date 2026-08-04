@@ -9,5 +9,7 @@ export interface ICategoryEntity {
 
   updatedAt: Date;
 
-  deletedAt: Date | null;
+  deletedAt?: Date | null;
+
+  deleted?: boolean;
 }

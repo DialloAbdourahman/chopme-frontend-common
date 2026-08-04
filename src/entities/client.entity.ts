@@ -11,6 +11,7 @@ export interface IClientEntity {
   createdAt?: Date;
   updatedAt?: Date;
   deletedAt?: Date | null;
+  deleted?: boolean;
 }
 
 export interface IClientWithUserEntity extends IClientEntity {

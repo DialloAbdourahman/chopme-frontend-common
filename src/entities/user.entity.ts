@@ -8,6 +8,7 @@ export interface IUserEntity {
   role: EnumUserRole;
   authType: EnumAuthType;
   createdAt: Date;
+  deleted?: boolean;
   updatedAt?: Date;
   deletedAt?: Date | null;
 }

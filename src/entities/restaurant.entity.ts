@@ -79,4 +79,5 @@ export interface IRestaurantEntity {
   createdAt: Date;
   updatedAt: Date;
   deletedAt: Date | null;
+  deleted?: Date;
 }

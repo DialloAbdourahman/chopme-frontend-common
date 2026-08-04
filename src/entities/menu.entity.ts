@@ -33,7 +33,9 @@ export type IMenuEntity = {
 
   createdAt: Date;
 
-  updatedAt: Date;
+  updatedAt?: Date;
 
-  deletedAt: Date | null;
+  deletedAt?: Date | null;
+
+  deleted?: boolean;
 };

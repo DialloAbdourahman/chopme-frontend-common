@@ -10,6 +10,7 @@ export interface IRestaurantMemberEntity {
   createdAt: Date;
   updatedAt: Date;
   deletedAt?: Date | null;
+  deleted?: boolean;
 }
 
 export interface IRestaurantMemberWithUserEntity extends IRestaurantMemberEntity {
