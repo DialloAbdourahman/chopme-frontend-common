@@ -12,3 +12,4 @@ export * from "./create-rating.dto";
 export * from "./update-user-profile.dto";
 export * from "./update-password.dto";
 export * from "./update-client-information.dto";
+export * from "./restaurant-wallet.dto";
