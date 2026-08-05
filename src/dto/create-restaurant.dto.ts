@@ -40,13 +40,19 @@ export const createRestaurantSchema = z.object({
   slogan: z.string().optional(),
   description: z.string().optional(),
   phone: z
-    .string()
-    .regex(
-      /^\+2376\d{8}$/,
-      "Phone number must be a valid Cameroonian number in the format +237620487789",
-    )
+    .union([
+      z.literal(""),
+      z
+        .string()
+        .regex(
+          /^\+2376\d{8}$/,
+          "Phone number must be a valid Cameroonian number in the format +237620487789",
+        ),
+    ])
     .optional(),
-  restaurantEmail: z.string().optional(),
+  restaurantEmail: z
+    .union([z.literal(""), z.string().email("Enter a valid email address")])
+    .optional(),
   type: z.nativeEnum(EnumRestaurantType),
   address: restaurantAddressSchema,
   location: restaurantLocationSchema,
