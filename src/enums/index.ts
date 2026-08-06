@@ -12,3 +12,4 @@ export * from "./networks";
 export * from "./web-socket-events";
 export * from "./auth-types";
 export * from "./user-language";
+export * from "./notification-type";
