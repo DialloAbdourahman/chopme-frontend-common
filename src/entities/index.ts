@@ -8,3 +8,4 @@ export * from "./restaurant.entity";
 export * from "./address.entity";
 export * from "./restaurant-rating.entity";
 export * from "./restaurant-member.entity";
+export * from "./transfer.entity";
