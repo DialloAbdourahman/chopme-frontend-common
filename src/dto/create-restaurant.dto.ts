@@ -26,39 +26,45 @@ export const availabilitySchema = z.object({
   closeTime: z.string().min(1, "Close time is required"),
 });
 
-export const createRestaurantSchema = z.object({
-  fullName: z.string().min(1, "Full name is required"),
-  email: z.string().email("Enter a valid email address"),
-  password: z
-    .string()
-    .min(8, "Password must be at least 8 characters long")
-    .regex(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/,
-      "Password must contain uppercase, lowercase, number and special character",
-    ),
-  name: z.string().min(1, "Restaurant name is required"),
-  slogan: z.string().optional(),
-  description: z.string().optional(),
-  phone: z
-    .union([
-      z.literal(""),
-      z
-        .string()
-        .regex(
-          /^\+2376\d{8}$/,
-          "Phone number must be a valid Cameroonian number in the format +237620487789",
-        ),
-    ])
-    .optional(),
-  restaurantEmail: z
-    .union([z.literal(""), z.string().email("Enter a valid email address")])
-    .optional(),
-  type: z.nativeEnum(EnumRestaurantType),
-  address: restaurantAddressSchema,
-  location: restaurantLocationSchema,
-  deliveryPricingKm: z.array(deliveryPricingKmSchema).optional(),
-  availability: z.array(availabilitySchema).optional(),
-});
+export const createRestaurantSchema = z
+  .object({
+    fullName: z.string().min(1, "Full name is required"),
+    email: z.string().email("Enter a valid email address"),
+    password: z
+      .string()
+      .min(8, "Password must be at least 8 characters long")
+      .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/,
+        "Password must contain uppercase, lowercase, number and special character",
+      ),
+    confirmPassword: z.string().min(1, "Please confirm your password"),
+    name: z.string().min(1, "Restaurant name is required"),
+    slogan: z.string().optional(),
+    description: z.string().optional(),
+    phone: z
+      .union([
+        z.literal(""),
+        z
+          .string()
+          .regex(
+            /^\+2376\d{8}$/,
+            "Phone number must be a valid Cameroonian number in the format +237620487789",
+          ),
+      ])
+      .optional(),
+    restaurantEmail: z
+      .union([z.literal(""), z.string().email("Enter a valid email address")])
+      .optional(),
+    type: z.nativeEnum(EnumRestaurantType),
+    address: restaurantAddressSchema,
+    location: restaurantLocationSchema,
+    deliveryPricingKm: z.array(deliveryPricingKmSchema).optional(),
+    availability: z.array(availabilitySchema).optional(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
 
 export type CreateRestaurantDto = z.infer<typeof createRestaurantSchema>;
 export type RestaurantAddressDto = z.infer<typeof restaurantAddressSchema>;
