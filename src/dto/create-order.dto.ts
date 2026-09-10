@@ -1,7 +1,10 @@
 import { z } from "zod";
+import { restaurantLocationSchema } from "./create-restaurant.dto";
 
 export const createOrderSchema = z.object({
   restaurantId: z.string().min(1, "Restaurant is required"),
+
+  clientLocation: restaurantLocationSchema,
 
   items: z
     .array(
