@@ -4,7 +4,7 @@ import { IUserEntity } from "./user.entity";
 export interface IClientEntity {
   id?: string;
 
-  address?: IAddressEntity;
+  // address?: IAddressEntity;
 
   phoneNumber?: string;
 
@@ -17,5 +17,3 @@ export interface IClientEntity {
 export interface IClientWithUserEntity extends IClientEntity {
   user: IUserEntity;
 }
-
-// Country and city are not optional anymore for the client.
