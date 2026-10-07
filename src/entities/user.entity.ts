@@ -9,8 +9,11 @@ export interface IUserEntity {
   role: EnumUserRole;
   authType: EnumAuthType;
   language: EnumUserLanguage;
+  active?: boolean;
   createdAt: Date;
   deleted?: boolean;
   updatedAt?: Date;
   deletedAt?: Date | null;
+  lastLoginAt?: Date;
+  lastTokenRefreshedAt?: Date;
 }
