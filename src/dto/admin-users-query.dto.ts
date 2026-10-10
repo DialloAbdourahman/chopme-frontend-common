@@ -10,6 +10,9 @@ export const adminUsersQuerySchema = z.object({
   dateFrom: z.coerce.date().optional(),
   dateTo: z.coerce.date().optional(),
   sort: z.enum(["asc", "desc"]).optional(),
+  sortBy: z
+    .enum(["createdAt", "lastLoginAt", "lastTokenRefreshedAt"])
+    .optional(),
   search: z.string().optional(),
 });
 
