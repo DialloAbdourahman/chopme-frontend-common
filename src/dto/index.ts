@@ -14,3 +14,4 @@ export * from "./update-password.dto";
 export * from "./update-client-information.dto";
 export * from "./restaurant-wallet.dto";
 export * from "./admin-users-query.dto";
+export * from "./admin-restaurants-query.dto";
