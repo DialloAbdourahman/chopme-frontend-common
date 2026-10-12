@@ -27,8 +27,7 @@ export interface IOrderMetaData {
 
 export interface IOrderPaymentDetails {
   link: string;
-  requestId?: string;
-  appId?: string;
+  validUntil: Date;
 }
 
 export interface IOrderPaymentWebhookDetails {
