@@ -32,17 +32,24 @@ export interface IOrderPaymentDetails {
 }
 
 export interface IOrderPaymentWebhookDetails {
-  transactionId?: number;
+  requestId?: string;
+  transactionId?: string;
+  partnerTransactionId?: string;
+  mchTransactionRef?: string;
+  transactionTime?: Date;
   amount?: number;
-  appFee?: number;
-  chargedAmount?: number;
-  currency?: string;
-  ip?: string;
-  merchantFee?: number;
-  paymentType?: string;
+  currencyCode?: string;
   status?: string;
-  txRef?: string;
-  flwRef?: string;
+  transactionStatus?: string;
+  mobileWalletNumber?: string;
+  paymentMethod?: string;
+  payerName?: string;
+  payerFee?: number;
+  netAmountPaid?: number;
+  merchantFee?: number;
+  netAmountReceived?: number;
+  errorCode?: number;
+  errorMessage?: string;
 }
 
 export interface IOrderRefundWebhookDetails {
