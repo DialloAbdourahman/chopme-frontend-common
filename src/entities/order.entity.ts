@@ -75,7 +75,7 @@ export interface IOrderEntity {
 
   cancelledByRestaurantMemberId?: string;
 
-  transferId?: string;
+  // transferGroupId?: string;
 
   status: EnumOrderStatus;
 

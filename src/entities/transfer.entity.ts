@@ -1,3 +1,4 @@
+import { EnumTransferDirection } from "../enums/transfer-direction";
 import { EnumTransferStatuses } from "../enums/transfer-statuses";
 
 export interface ITransferEntity {
@@ -7,11 +8,11 @@ export interface ITransferEntity {
 
   status: EnumTransferStatuses;
 
-  totalRestaurantAmount: number;
-
-  totalPlatformAmount: number;
+  amount: number;
 
   transferId: number;
+  transferGroupId: string;
+  transferDirection: EnumTransferDirection;
 
   platformTransferStatus?: EnumTransferStatuses;
 
@@ -24,5 +25,6 @@ export interface ITransferEntity {
   updatedAt: Date;
 
   deletedAt?: Date | null;
+
   deleted?: boolean;
 }
