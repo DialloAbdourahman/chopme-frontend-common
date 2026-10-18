@@ -35,6 +35,8 @@ export interface IRefundEntity {
 
   status: EnumRefundStatus;
 
+  transactionId?: string;
+
   refundDetails?: IRefundDetails;
 
   refundWebhookDetails?: IRefundWebhookDetails;
