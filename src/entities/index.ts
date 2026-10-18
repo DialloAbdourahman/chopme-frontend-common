@@ -4,6 +4,7 @@ export * from "./client.entity";
 export * from "./category.entity";
 export * from "./menu.entity";
 export * from "./order.entity";
+export * from "./refund.entity";
 export * from "./restaurant.entity";
 export * from "./address.entity";
 export * from "./restaurant-rating.entity";

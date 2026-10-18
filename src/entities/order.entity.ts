@@ -1,6 +1,5 @@
 import { EnumOrderStatus } from "../enums/order-status";
 import { EnumOrderCancelledReason } from "../enums/order-cancelled-reason";
-import { EnumRefundStatus } from "../enums/refund-statuses";
 
 export interface IOrderItem {
   productId: string;
@@ -52,10 +51,6 @@ export interface IOrderPaymentWebhookDetails {
   errorMessage?: string;
 }
 
-export interface IOrderRefundWebhookDetails {
-  id?: number;
-}
-
 export interface IOrderClientLocation {
   type: "Point";
   coordinates: number[];
@@ -79,7 +74,7 @@ export interface IOrderEntity {
 
   status: EnumOrderStatus;
 
-  refundStatus?: EnumRefundStatus;
+  refundId?: string;
 
   statusTransitions: IOrderStatusTransition[];
 
@@ -102,8 +97,6 @@ export interface IOrderEntity {
   paymentDetails?: IOrderPaymentDetails;
 
   paymentWebhookDetails?: IOrderPaymentWebhookDetails;
-
-  refundWebhookDetails?: IOrderRefundWebhookDetails;
 
   clientLocation: IOrderClientLocation;
 
