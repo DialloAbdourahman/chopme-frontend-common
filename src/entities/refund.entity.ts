@@ -33,7 +33,11 @@ export interface IRefundEntity {
 
   orderId: string;
 
+  restaurantId?: string;
+
   status: EnumRefundStatus;
+
+  amount?: number;
 
   transactionId?: string;
 
